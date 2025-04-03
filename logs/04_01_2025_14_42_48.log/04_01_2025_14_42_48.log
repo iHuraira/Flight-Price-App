@@ -1,0 +1,50 @@
+[ 2025-04-01 14:42:48,467 ] 22 root - INFO - Data Ingestion has started
+[ 2025-04-01 14:42:48,903 ] 26 root - INFO - Data has been loaded
+[ 2025-04-01 14:42:49,909 ] 31 root - INFO - Training set saved with dimensions (240208, 12)
+[ 2025-04-01 14:42:50,168 ] 34 root - INFO - Testing set saved with dimensions (60053, 12)
+[ 2025-04-01 14:42:50,185 ] 20 root - INFO - Data transformation has been started
+[ 2025-04-01 14:42:50,185 ] 113 root - INFO - Basic transformation in progress
+[ 2025-04-01 14:42:50,185 ] 115 root - INFO - Columns renamed based on configuration
+[ 2025-04-01 14:42:50,185 ] 122 root - INFO - Computing and saving flight code statistics for training
+[ 2025-04-01 14:42:50,192 ] 125 root - INFO - Starting flight data processing
+[ 2025-04-01 14:42:50,722 ] 127 root - INFO - Flight timing and duration features created
+[ 2025-04-01 14:42:50,722 ] 129 root - INFO - Creating stop-related features
+[ 2025-04-01 14:42:50,923 ] 131 root - INFO - Stop-related features added
+[ 2025-04-01 14:42:50,923 ] 133 root - INFO - Applying flight code frequency-based features
+[ 2025-04-01 14:42:51,101 ] 135 root - INFO - Flight code features added successfully
+[ 2025-04-01 14:42:51,101 ] 137 root - INFO - Mapping 'is_frequent_route' to binary format
+[ 2025-04-01 14:42:51,101 ] 140 root - INFO - Dropping unnecessary columns: ['flight_date', 'airline_code', 'stop_area']
+[ 2025-04-01 14:42:51,133 ] 144 root - INFO - Cleaning and converting target column 'ticket_price'
+[ 2025-04-01 14:42:51,584 ] 151 root - INFO - Basic transformation completed successfully
+[ 2025-04-01 14:42:51,584 ] 113 root - INFO - Basic transformation in progress
+[ 2025-04-01 14:42:51,584 ] 115 root - INFO - Columns renamed based on configuration
+[ 2025-04-01 14:42:51,584 ] 122 root - INFO - Computing and saving flight code statistics for training
+[ 2025-04-01 14:42:51,584 ] 125 root - INFO - Starting flight data processing
+[ 2025-04-01 14:42:51,734 ] 127 root - INFO - Flight timing and duration features created
+[ 2025-04-01 14:42:51,738 ] 129 root - INFO - Creating stop-related features
+[ 2025-04-01 14:42:51,793 ] 131 root - INFO - Stop-related features added
+[ 2025-04-01 14:42:51,793 ] 133 root - INFO - Applying flight code frequency-based features
+[ 2025-04-01 14:42:51,834 ] 135 root - INFO - Flight code features added successfully
+[ 2025-04-01 14:42:51,834 ] 137 root - INFO - Mapping 'is_frequent_route' to binary format
+[ 2025-04-01 14:42:51,834 ] 140 root - INFO - Dropping unnecessary columns: ['flight_date', 'airline_code', 'stop_area']
+[ 2025-04-01 14:42:51,834 ] 144 root - INFO - Cleaning and converting target column 'ticket_price'
+[ 2025-04-01 14:42:51,965 ] 151 root - INFO - Basic transformation completed successfully
+[ 2025-04-01 14:42:51,967 ] 67 root - INFO - Creating preprocessing pipeline
+[ 2025-04-01 14:42:51,967 ] 30 root - INFO - Creating customized preprocessor with OneHot + Ordinal encoding
+[ 2025-04-01 14:42:51,967 ] 57 root - INFO - Preprocessor successfully created
+[ 2025-04-01 14:42:52,002 ] 78 root - INFO - Shapes before transformation:
+[ 2025-04-01 14:42:52,002 ] 79 root - INFO - X_train: (240208, 15), y_train: (240208,)
+[ 2025-04-01 14:42:52,002 ] 80 root - INFO - X_test: (60053, 15), y_test: (60053,)
+[ 2025-04-01 14:42:52,002 ] 82 root - INFO - Fitting and transforming training data
+[ 2025-04-01 14:42:52,642 ] 85 root - INFO - Transforming test data
+[ 2025-04-01 14:42:52,751 ] 88 root - INFO - Shapes after transformation:
+[ 2025-04-01 14:42:52,751 ] 89 root - INFO - train_array: (240208, 39)
+[ 2025-04-01 14:42:52,751 ] 90 root - INFO - test_array: (60053, 39)
+[ 2025-04-01 14:42:52,752 ] 96 root - INFO - Preprocessor saved to artifacts/Pickle/preprocessor.pkl
+[ 2025-04-01 14:42:52,800 ] 47 root - INFO - Splitting training and test input data
+[ 2025-04-01 14:42:52,800 ] 65 root - INFO - Training model: ElasticNet
+[ 2025-04-01 14:46:06,752 ] 74 root - INFO - ElasticNet best CV score: 0.9047493012361048
+[ 2025-04-01 14:46:06,752 ] 75 root - INFO - ElasticNet best params: {'alpha': 0.01, 'l1_ratio': 0.9, 'max_iter': 1000}
+[ 2025-04-01 14:46:06,752 ] 83 root - INFO - Best model: ElasticNet with score 0.9047493012361048
+[ 2025-04-01 14:46:06,752 ] 84 root - INFO - Best hyperparameters: {'alpha': 0.01, 'l1_ratio': 0.9, 'max_iter': 1000}
+[ 2025-04-01 14:46:06,752 ] 88 root - INFO - Saved best model to artifacts/Pickle/model.pkl

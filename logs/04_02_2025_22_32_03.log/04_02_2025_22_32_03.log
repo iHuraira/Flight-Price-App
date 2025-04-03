@@ -1,0 +1,50 @@
+[ 2025-04-02 22:32:03,144 ] 22 root - INFO - Data Ingestion has started
+[ 2025-04-02 22:32:03,569 ] 26 root - INFO - Data has been loaded
+[ 2025-04-02 22:32:04,524 ] 31 root - INFO - Training set saved with dimensions (240208, 12)
+[ 2025-04-02 22:32:04,754 ] 34 root - INFO - Testing set saved with dimensions (60053, 12)
+[ 2025-04-02 22:32:04,771 ] 20 root - INFO - Data transformation has been started
+[ 2025-04-02 22:32:04,771 ] 113 root - INFO - Basic transformation in progress
+[ 2025-04-02 22:32:04,771 ] 115 root - INFO - Columns renamed based on configuration
+[ 2025-04-02 22:32:04,771 ] 122 root - INFO - Computing and saving flight code statistics for training
+[ 2025-04-02 22:32:04,783 ] 125 root - INFO - Starting flight data processing
+[ 2025-04-02 22:32:05,309 ] 127 root - INFO - Flight timing and duration features created
+[ 2025-04-02 22:32:05,309 ] 129 root - INFO - Creating stop-related features
+[ 2025-04-02 22:32:05,513 ] 131 root - INFO - Stop-related features added
+[ 2025-04-02 22:32:05,514 ] 133 root - INFO - Applying flight code frequency-based features
+[ 2025-04-02 22:32:05,670 ] 135 root - INFO - Flight code features added successfully
+[ 2025-04-02 22:32:05,670 ] 137 root - INFO - Mapping 'is_frequent_route' to binary format
+[ 2025-04-02 22:32:05,674 ] 140 root - INFO - Dropping unnecessary columns: ['flight_date', 'airline_code', 'stop_area']
+[ 2025-04-02 22:32:05,701 ] 144 root - INFO - Cleaning and converting target column 'ticket_price'
+[ 2025-04-02 22:32:06,151 ] 151 root - INFO - Basic transformation completed successfully
+[ 2025-04-02 22:32:06,151 ] 113 root - INFO - Basic transformation in progress
+[ 2025-04-02 22:32:06,151 ] 115 root - INFO - Columns renamed based on configuration
+[ 2025-04-02 22:32:06,152 ] 122 root - INFO - Computing and saving flight code statistics for training
+[ 2025-04-02 22:32:06,154 ] 125 root - INFO - Starting flight data processing
+[ 2025-04-02 22:32:06,288 ] 127 root - INFO - Flight timing and duration features created
+[ 2025-04-02 22:32:06,288 ] 129 root - INFO - Creating stop-related features
+[ 2025-04-02 22:32:06,338 ] 131 root - INFO - Stop-related features added
+[ 2025-04-02 22:32:06,338 ] 133 root - INFO - Applying flight code frequency-based features
+[ 2025-04-02 22:32:06,378 ] 135 root - INFO - Flight code features added successfully
+[ 2025-04-02 22:32:06,378 ] 137 root - INFO - Mapping 'is_frequent_route' to binary format
+[ 2025-04-02 22:32:06,380 ] 140 root - INFO - Dropping unnecessary columns: ['flight_date', 'airline_code', 'stop_area']
+[ 2025-04-02 22:32:06,387 ] 144 root - INFO - Cleaning and converting target column 'ticket_price'
+[ 2025-04-02 22:32:06,498 ] 151 root - INFO - Basic transformation completed successfully
+[ 2025-04-02 22:32:06,508 ] 67 root - INFO - Creating preprocessing pipeline
+[ 2025-04-02 22:32:06,508 ] 30 root - INFO - Creating customized preprocessor with OneHot + Ordinal encoding
+[ 2025-04-02 22:32:06,508 ] 57 root - INFO - Preprocessor successfully created
+[ 2025-04-02 22:32:06,531 ] 78 root - INFO - Shapes before transformation:
+[ 2025-04-02 22:32:06,531 ] 79 root - INFO - X_train: (240208, 15), y_train: (240208,)
+[ 2025-04-02 22:32:06,531 ] 80 root - INFO - X_test: (60053, 15), y_test: (60053,)
+[ 2025-04-02 22:32:06,531 ] 82 root - INFO - Fitting and transforming training data
+[ 2025-04-02 22:32:07,167 ] 85 root - INFO - Transforming test data
+[ 2025-04-02 22:32:07,276 ] 88 root - INFO - Shapes after transformation:
+[ 2025-04-02 22:32:07,276 ] 89 root - INFO - train_array: (240208, 39)
+[ 2025-04-02 22:32:07,276 ] 90 root - INFO - test_array: (60053, 39)
+[ 2025-04-02 22:32:07,278 ] 96 root - INFO - Preprocessor saved to artifacts/Pickle/preprocessor.pkl
+[ 2025-04-02 22:32:07,321 ] 47 root - INFO - Splitting training and test input data
+[ 2025-04-02 22:32:07,321 ] 65 root - INFO - Training model: DecisionTree
+[ 2025-04-02 22:32:34,582 ] 74 root - INFO - DecisionTree best CV score: 0.9728825943015679
+[ 2025-04-02 22:32:34,582 ] 75 root - INFO - DecisionTree best params: {'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 2}
+[ 2025-04-02 22:32:34,582 ] 83 root - INFO - Best model: DecisionTree with score 0.9728825943015679
+[ 2025-04-02 22:32:34,582 ] 84 root - INFO - Best hyperparameters: {'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 2}
+[ 2025-04-02 22:32:34,586 ] 88 root - INFO - Saved best model to artifacts/Pickle/model.pkl

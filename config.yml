@@ -1,0 +1,116 @@
+artifacts:
+  raw_data_path: "artifacts/Data/Raw.csv"  # Folder where raw data is stored
+  processed_data_path: "artifacts/Data/Preprocessed.csv"  # Folder for processed data
+  train_data_path: "artifacts/Data/train.csv"
+  test_data_path: "artifacts/Data/test.csv"
+  pipeline_file: "artifacts/Pickle/pipeline.pkl"  # Name of the file to store the pipeline
+  model_file: "artifacts/Pickle/model.pkl"  # Name of the file to store the trained model
+  threshold_path: artifacts/Pickle/threshold.pkl
+  preprocessor_path: artifacts/Pickle/preprocessor.pkl
+
+datatransformation:
+  COLUMN_RENAME_MAPPING:
+    'date': 'flight_date'
+    'airline': 'airline_name'
+    'ch_code': 'airline_code'
+    'num_code': 'flight_code'
+    'dep_time': 'departure_time'
+    'from': 'departure_city'
+    'time_taken': 'flight_duration'
+    'stop': 'stop_type'
+    'arr_time': 'arrival_time'
+    'to': 'arrival_city'
+    'price': 'ticket_price'
+
+stop_area_dict:
+  IXU: 'Dibrugarh Airport'
+  IDR: 'Indore Airport'
+  Patna: 'Lok Nayak Jayaprakash Airport'
+  Indore: 'Indore Airport'
+  PAT: 'Patna Airport'
+  MYQ: 'Mysore Airport'
+  Bhubaneswar: 'Biju Patnaik International Airport'
+  KLH: 'Kochi Airport'
+  JGB: 'Jagdalpur Airport'
+  JRG: 'Jorhat Airport'
+  STV: 'Surat Airport'
+  BBI: 'Bhubaneswar Airport'
+  Delhi: 'Indira Gandhi International Airport'
+  Hyderabad: 'Rajiv Gandhi International Airport'
+  IXE: 'Mangalore International Airport'
+  Ranchi: 'Birsa Munda Airport'
+  Raipur: 'Swami Vivekananda International Airport'
+  Chennai: 'Chennai International Airport'
+  Guwahati: 'Lokpriya Gopinath Bordoloi International Airport'
+  Mysore: 'Mysore Airport'
+  Mangalore: 'Mangalore International Airport'
+  Mumbai: 'Chhatrapati Shivaji Maharaj International Airport'
+  Kolkata: 'Netaji Subhas Chandra Bose International Airport'
+  VTZ: 'Visakhapatnam Airport'
+  Nagpur: 'Dr. Babasaheb Ambedkar International Airport'
+  NDC: 'Dibrugarh Airport'
+  RPR: 'Raipur Airport'
+  GOP: 'Gorakhpur Airport'
+  Surat: 'Surat Airport'
+  Lucknow: 'Chaudhary Charan Singh International Airport'
+  NAG: 'Nagpur Airport'
+  Vishakhapatnam: 'Visakhapatnam International Airport'
+  Kolhapur: 'Kolhapur Airport'
+  IXR: 'Ranchi Airport'
+  GAY: 'Gaya International Airport'
+  GAU: 'Lokpriya Gopinath Bordoloi International Airport'
+  HYD: 'Hyderabad International Airport'
+
+
+selected_columns:
+  - 'airline_name'
+  - 'departure_city'
+  - 'arrival_city'
+  - 'flight_type'
+  - 'num_stops'
+  - 'departure_time_of_day'
+  - 'arrival_time_of_day'
+  - 'flight_duration_minutes'
+  - 'delay_duration_minutes'
+  - 'flight_code_category'
+  - 'ticket_price'
+
+models:
+  # ElasticNet:
+  #   alpha: [0.01, 0.1, 1.0]
+  #   l1_ratio: [0.1, 0.5, 0.9]
+  #   max_iter: [1000, 2000]
+
+  # KNeighborsRegressor:
+  #   n_neighbors: [3, 5, 7, 10]
+  #   weights: ['uniform', 'distance']
+  #   algorithm: ['auto', 'kd_tree', 'brute']
+
+  DecisionTree:
+    max_depth: [5, 10, 20, None]
+    min_samples_split: [2, 5, 10]
+    min_samples_leaf: [1, 2, 4]
+
+  # RandomForest:
+  #   n_estimators: [100, 200]
+  #   max_depth: [10, 20, None]
+  #   min_samples_split: [2, 5]
+  #   min_samples_leaf: [1, 2]
+
+  # GradientBoosting:
+  #   n_estimators: [100, 150]
+  #   learning_rate: [0.05, 0.1]
+  #   max_depth: [3, 5]
+  #   subsample: [0.8, 1.0]
+
+  # XGBoost:
+  #   n_estimators: [100, 200]
+  #   learning_rate: [0.05, 0.1]
+  #   max_depth: [3, 5, 7]
+  #   subsample: [0.8, 1.0]
+
+  # AdaBoost:
+  #   n_estimators: [50, 100, 150]
+  #   learning_rate: [0.01, 0.1, 1.0]
+
+  # LinearRegression: {}

@@ -1,0 +1,91 @@
+departure_city,arrival_city,num_stops,avg_flight_duration_minutes
+Bangalore,Chennai,non-stop ,62.708333333333336
+Chennai,Bangalore,non-stop ,68.31111111111112
+Bangalore,Hyderabad,non-stop ,73.05245535714286
+Chennai,Hyderabad,non-stop ,73.67977528089888
+Hyderabad,Bangalore,non-stop ,74.09036144578313
+Hyderabad,Chennai,non-stop ,77.26415094339623
+Mumbai,Hyderabad,non-stop ,86.51358344113842
+Hyderabad,Mumbai,non-stop ,91.80132450331126
+Mumbai,Bangalore,non-stop ,104.47127139364304
+Bangalore,Mumbai,non-stop ,107.55963302752293
+Chennai,Mumbai,non-stop ,118.72710622710623
+Mumbai,Chennai,non-stop ,119.49175824175825
+Hyderabad,Kolkata,non-stop ,122.53535353535354
+Mumbai,Delhi,non-stop ,131.0976290097629
+Delhi,Kolkata,non-stop ,131.74199623352166
+Delhi,Mumbai,non-stop ,132.80199944459872
+Kolkata,Hyderabad,non-stop ,132.8131868131868
+Delhi,Hyderabad,non-stop ,133.32295988934993
+Hyderabad,Delhi,non-stop ,135.81321022727272
+Kolkata,Chennai,non-stop ,142.92122538293216
+Chennai,Kolkata,non-stop ,143.52008456659618
+Kolkata,Delhi,non-stop ,147.25465838509317
+Bangalore,Kolkata,non-stop ,151.70658682634732
+Mumbai,Kolkata,non-stop ,158.64415862808147
+Kolkata,Bangalore,non-stop ,161.47582697201017
+Bangalore,Delhi,non-stop ,166.38625056535506
+Delhi,Bangalore,non-stop ,166.96948998178507
+Chennai,Delhi,non-stop ,167.28571428571428
+Kolkata,Mumbai,non-stop ,170.9100529100529
+Delhi,Chennai,non-stop ,170.9928229665072
+Mumbai,Delhi,2,542.9230769230769
+Hyderabad,Delhi,2,588.125
+Bangalore,Delhi,2,600.6018518518518
+Delhi,Mumbai,2,607.2602739726027
+Bangalore,Delhi,1,668.56871745079
+Hyderabad,Bangalore,2,688.0873493975904
+Mumbai,Kolkata,2,698.1818181818181
+Delhi,Bangalore,1,705.33759929391
+Delhi,Bangalore,2,713.261316872428
+Kolkata,Bangalore,2,713.7330873308733
+Kolkata,Delhi,2,725.0760456273764
+Bangalore,Mumbai,1,728.9057116953762
+Mumbai,Delhi,1,736.4665292588942
+Chennai,Delhi,1,736.800215594682
+Hyderabad,Delhi,1,752.3708787321352
+Hyderabad,Mumbai,1,756.3264173970931
+Mumbai,Bangalore,1,766.3438223044886
+Mumbai,Chennai,2,773.0108254397835
+Delhi,Mumbai,1,773.929155547904
+Delhi,Chennai,1,795.832431131962
+Kolkata,Delhi,1,797.8223097416889
+Hyderabad,Bangalore,1,803.7039786223278
+Kolkata,Mumbai,1,824.0674282248282
+Chennai,Mumbai,1,824.2621951219512
+Bangalore,Kolkata,1,824.5696482646168
+Delhi,Hyderabad,2,825.5588235294117
+Mumbai,Kolkata,1,827.4136983792692
+Chennai,Hyderabad,1,842.2790277219767
+Mumbai,Chennai,1,843.0883238944451
+Chennai,Bangalore,2,844.7495826377295
+Mumbai,Hyderabad,1,847.2841285089123
+Hyderabad,Kolkata,1,856.6043348916277
+Delhi,Kolkata,1,858.5508175697339
+Hyderabad,Chennai,1,861.8958742632612
+Kolkata,Hyderabad,1,864.4477460501522
+Delhi,Hyderabad,1,865.3202800829876
+Hyderabad,Kolkata,2,875.0346420323326
+Hyderabad,Chennai,2,879.3421052631579
+Delhi,Kolkata,2,890.3760162601626
+Chennai,Delhi,2,899.0191387559809
+Chennai,Bangalore,1,899.8824393828068
+Kolkata,Bangalore,1,902.4613981762918
+Bangalore,Kolkata,2,903.6387096774193
+Bangalore,Hyderabad,1,907.5500065368022
+Bangalore,Mumbai,2,911.3818181818182
+Bangalore,Chennai,1,911.450156624286
+Chennai,Kolkata,1,918.4649824112568
+Kolkata,Chennai,1,918.5355759070095
+Chennai,Mumbai,2,971.9565217391304
+Mumbai,Hyderabad,2,985.4029850746268
+Chennai,Hyderabad,2,988.6209813874789
+Kolkata,Mumbai,2,993.1746031746031
+Kolkata,Hyderabad,2,993.7108655616943
+Delhi,Chennai,2,999.3693322341303
+Chennai,Kolkata,2,1053.69140625
+Hyderabad,Mumbai,2,1115.672131147541
+Bangalore,Chennai,2,1177.8429423459245
+Mumbai,Bangalore,2,1184.1554054054054
+Kolkata,Chennai,2,1190.511583011583
+Bangalore,Hyderabad,2,1377.1596244131456
