@@ -131,7 +131,5 @@ if not match.empty:
         
         except Exception as e:
             st.error(f"Prediction failed: {str(e)}")
-
-
 else:
     st.warning("No data available for this combination.")
