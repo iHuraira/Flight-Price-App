@@ -1,0 +1,8 @@
+raw_data_path: "artifacts/Data/Raw.csv"
+processed_data_path: "artifacts/Data/Preprocessed.csv"
+train_data_path: "artifacts/Data/train.csv"
+test_data_path: "artifacts/Data/test.csv"
+pipeline_file: "artifacts/Pickle/pipeline.pkl"
+model_file: "artifacts/Pickle/model.pkl"
+threshold_path: "artifacts/Pickle/threshold.pkl"
+preprocessor_path: "artifacts/Pickle/preprocessor.pkl"

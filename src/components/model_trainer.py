@@ -16,7 +16,7 @@ from sklearn.ensemble import (
 )
 
 from src.logger import logging
-from src.utils import load_config
+from src.utils import load_all_configs
 from src.exceptions import CustomException
 from src.components.data_ingestion import DataIngestion
 from src.components.data_preparation import DataPreparation
@@ -27,9 +27,9 @@ warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
 class ModelTrainer:
     def __init__(self):
-        config = load_config("config.yml")
-        self.model_path = config['artifacts']['model_file']
-        self.model_config = config['models']
+        self.config = load_all_configs()
+        self.model_path = self.config['artifacts']['model_file']
+        self.model_config = self.config['models']
 
         self.model_mapping = {
             # 'ElasticNet': ElasticNet,

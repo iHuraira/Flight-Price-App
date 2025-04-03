@@ -1,18 +1,30 @@
-import os
 import yaml
 from pathlib import Path
-
-def load_config(config_path="config.yml"):
-    
-    try:
-        with open(config_path, "r") as file:
-            config = yaml.safe_load(file)
-        return config
-    except FileNotFoundError:
-        print(f"Error: {config_path} not found.")
-        return None
-    except yaml.YAMLError as e:
-        print(f"Error loading YAML: {e}")
-        return None
-
  
+def load_yaml_file(file_path):
+    try:
+        with open(file_path, "r") as file:
+            return yaml.safe_load(file)
+    except FileNotFoundError:
+        print(f"⚠️ Config file not found: {file_path}")
+    except yaml.YAMLError as e:
+        print(f"⚠️ YAML format error in {file_path}: {e}")
+    return {}
+ 
+def load_all_configs(config_dir="config"):
+    config_dir = Path(config_dir)
+    
+    config_files = [
+        "artifacts.yml",
+        "transformation.yml",
+        "airports.yml",
+        "features.yml",
+        "model.yml",
+    ]
+
+    configs = {}
+    for file in config_files:
+        key = file.replace(".yml", "")
+        configs[key] = load_yaml_file(config_dir / file)
+
+    return configs

@@ -37,3 +37,25 @@ The dataset contains **206,774** flight records from Indian airlines with detail
 - `price` is stored as text and may require conversion for modeling.
 - Could be useful for building price predictors, time estimators, or airline analytics.
 """)
+
+footer = """
+<style>
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f1f1f1;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 1px solid #e1e1e1;
+}
+</style>
+<div class="footer">
+    ⏱️ Built with ❤️ using Streamlit | © 2025 Your Name or Company
+</div>
+"""
+
+st.markdown(footer, unsafe_allow_html=True)

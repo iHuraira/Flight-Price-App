@@ -1,0 +1,12 @@
+selected_columns:
+  - "airline_name"
+  - "departure_city"
+  - "arrival_city"
+  - "flight_type"
+  - "num_stops"
+  - "departure_time_of_day"
+  - "arrival_time_of_day"
+  - "flight_duration_minutes"
+  - "delay_duration_minutes"
+  - "flight_code_category"
+  - "ticket_price"

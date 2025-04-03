@@ -3,7 +3,7 @@ import sys
 import pickle
 import numpy as np
 
-from src.utils import load_config
+from src.utils import load_all_configs
 from src.logger import logging
 from src.exceptions import CustomException
 
@@ -16,9 +16,8 @@ from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
 class DataTransformation:
     def __init__(self):
         
-        config = load_config("config.yml")
-        
-        self.save_path = config['artifacts']['preprocessor_path']
+        self.config = load_all_configs()
+        self.save_path = self.config['artifacts']['preprocessor_path']
 
     def create_preprocessor(self):
         try:

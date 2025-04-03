@@ -3,21 +3,20 @@ import sys
 import pickle
 import pandas as pd
 
-from src.utils import load_config
+from src.utils import load_all_configs
 from src.logger import logging
 from src.exceptions import CustomException
 
 class DataPreparation:
     def __init__(self):
-        config = load_config("config.yml")
-    
-        self.renaming_dictionary = config['datatransformation']['COLUMN_RENAME_MAPPING']
-        self.stop_area = config.get('stop_area_dict', {})
-        self.selected_columns = config.get('selected_columns', [])
-        self.threshold_path = config['artifacts']['threshold_path']
+        self.config = load_all_configs()
+        self.renaming_dictionary = self.config['datatransformation']['COLUMN_RENAME_MAPPING']
+        self.stop_area = self.config.get('stop_area_dict', {})
+        self.selected_columns = self.config.get('selected_columns', [])
+        self.threshold_path = self.config['artifacts']['threshold_path']
         self.target_column = 'ticket_price'
 
-        logging.info("Data transformation has been started")
+        logging.info("DataPreparation initialized with config settings.")
 
     def save_flight_code_stats(self, df, artifacts_path):
         flight_code_counts = df['flight_code'].value_counts()
@@ -154,35 +153,4 @@ class DataPreparation:
         except CustomException as e:
             logging.error("Error occurred during basic transformation")
             raise CustomException(e, sys)
-        
-        
-if __name__ == "__main__":
-    
-    example_data = pd.DataFrame([{
-        'date': '11-02-2022',
-        'airline': 'Air India',
-        'ch_code': 'AI',
-        'num_code': 868,
-        'dep_time': '18:00',
-        'from': 'Delhi',
-        'time_taken': '02h 00m',
-        'stop': 'non-stop ',
-        'arr_time': '20:00',
-        'to': 'Mumbai',
-        'flight_type': 'business'
-    }])
-
-    data_preparation = DataPreparation()
-    
-    prepared_data = data_preparation.basic_transformation(example_data, is_predict=True)
-    
-    print(prepared_data[['airline_name', 'departure_city', 'arrival_city', 'flight_type',
-       'departure_time_of_day', 'arrival_time_of_day']])
-    print(prepared_data.columns)
-
-    # transformer = DataTransformation()
-    # train_array, test_array = transformer.process_data(train_data_transformed, test_data_transformed)
-
-    # trainer = ModelTrainer()
-    # trainer.initiate_model_trainer(train_array, test_array)
         
