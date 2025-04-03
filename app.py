@@ -34,4 +34,6 @@ pg = st.navigation({
     "Info" : [about_page]
 })
 
+# This is the new project
+
 pg.run()
