@@ -1,0 +1,43 @@
+[ 2025-04-03 14:41:39,534 ] 20 root - INFO - Data transformation has been started
+[ 2025-04-03 14:41:41,480 ] 20 root - INFO - Data transformation has been started
+[ 2025-04-03 14:41:42,052 ] 20 root - INFO - Data transformation has been started
+[ 2025-04-03 14:41:43,075 ] 113 root - INFO - Basic transformation in progress
+[ 2025-04-03 14:41:43,075 ] 115 root - INFO - Columns renamed based on configuration
+[ 2025-04-03 14:41:43,075 ] 119 root - INFO - Loading precomputed flight code statistics for prediction
+[ 2025-04-03 14:41:43,076 ] 125 root - INFO - Starting flight data processing
+[ 2025-04-03 14:41:43,085 ] 127 root - INFO - Flight timing and duration features created
+[ 2025-04-03 14:41:43,085 ] 129 root - INFO - Creating stop-related features
+[ 2025-04-03 14:41:43,087 ] 131 root - INFO - Stop-related features added
+[ 2025-04-03 14:41:43,087 ] 133 root - INFO - Applying flight code frequency-based features
+[ 2025-04-03 14:41:43,090 ] 135 root - INFO - Flight code features added successfully
+[ 2025-04-03 14:41:43,090 ] 137 root - INFO - Mapping 'is_frequent_route' to binary format
+[ 2025-04-03 14:41:43,090 ] 140 root - INFO - Dropping unnecessary columns: ['flight_date', 'airline_code', 'stop_area']
+[ 2025-04-03 14:41:43,091 ] 151 root - INFO - Basic transformation completed successfully
+[ 2025-04-03 14:41:44,784 ] 20 root - INFO - Data transformation has been started
+[ 2025-04-03 14:41:45,512 ] 20 root - INFO - Data transformation has been started
+[ 2025-04-03 14:41:45,521 ] 113 root - INFO - Basic transformation in progress
+[ 2025-04-03 14:41:45,521 ] 115 root - INFO - Columns renamed based on configuration
+[ 2025-04-03 14:41:45,521 ] 119 root - INFO - Loading precomputed flight code statistics for prediction
+[ 2025-04-03 14:41:45,521 ] 125 root - INFO - Starting flight data processing
+[ 2025-04-03 14:41:45,526 ] 127 root - INFO - Flight timing and duration features created
+[ 2025-04-03 14:41:45,526 ] 129 root - INFO - Creating stop-related features
+[ 2025-04-03 14:41:45,528 ] 131 root - INFO - Stop-related features added
+[ 2025-04-03 14:41:45,528 ] 133 root - INFO - Applying flight code frequency-based features
+[ 2025-04-03 14:41:45,530 ] 135 root - INFO - Flight code features added successfully
+[ 2025-04-03 14:41:45,531 ] 137 root - INFO - Mapping 'is_frequent_route' to binary format
+[ 2025-04-03 14:41:45,531 ] 140 root - INFO - Dropping unnecessary columns: ['flight_date', 'airline_code', 'stop_area']
+[ 2025-04-03 14:41:45,532 ] 151 root - INFO - Basic transformation completed successfully
+[ 2025-04-03 14:41:47,351 ] 20 root - INFO - Data transformation has been started
+[ 2025-04-03 14:41:48,142 ] 20 root - INFO - Data transformation has been started
+[ 2025-04-03 14:41:48,150 ] 113 root - INFO - Basic transformation in progress
+[ 2025-04-03 14:41:48,155 ] 115 root - INFO - Columns renamed based on configuration
+[ 2025-04-03 14:41:48,155 ] 119 root - INFO - Loading precomputed flight code statistics for prediction
+[ 2025-04-03 14:41:48,155 ] 125 root - INFO - Starting flight data processing
+[ 2025-04-03 14:41:48,160 ] 127 root - INFO - Flight timing and duration features created
+[ 2025-04-03 14:41:48,160 ] 129 root - INFO - Creating stop-related features
+[ 2025-04-03 14:41:48,162 ] 131 root - INFO - Stop-related features added
+[ 2025-04-03 14:41:48,162 ] 133 root - INFO - Applying flight code frequency-based features
+[ 2025-04-03 14:41:48,166 ] 135 root - INFO - Flight code features added successfully
+[ 2025-04-03 14:41:48,166 ] 137 root - INFO - Mapping 'is_frequent_route' to binary format
+[ 2025-04-03 14:41:48,170 ] 140 root - INFO - Dropping unnecessary columns: ['flight_date', 'airline_code', 'stop_area']
+[ 2025-04-03 14:41:48,172 ] 151 root - INFO - Basic transformation completed successfully

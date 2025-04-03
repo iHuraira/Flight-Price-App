@@ -10,6 +10,8 @@ import pandas as pd
 from random import randint
 from datetime import datetime, timedelta
 from src.components.ml_components.data_preparation import DataPreparation
+from src.components.ml_components.data_model import FlightInputModel
+
 
 def format_duration(minutes):
     hours = minutes // 60
@@ -105,19 +107,20 @@ if not match.empty:
     
     prepared_data = DataPreparation()
 
-    # --- Step 3: Show final DataFrame ---
-    final_df = pd.DataFrame([{
-        "airline_name": airline_name,
-        "airline_code": airline_code,
-        "flight_code": flight_code,
-        "flight_type": flight_type,
-        "departure_city": departure_city,
-        "arrival_city": arrival_city,
-        "stop_type": num_stops,
-        "flight_duration": duration_formatted,
-        "departure_time": selected_times['departure_time'],
-        "arrival_time": selected_times['arrival_time']
-    }])
+    input_model = FlightInputModel(
+    airline_name=airline_name,
+    airline_code=airline_code,
+    flight_code=flight_code,
+    flight_type=flight_type,
+    departure_city=departure_city,
+    arrival_city=arrival_city,
+    stop_type=num_stops,
+    flight_duration=duration_formatted,
+    departure_time=selected_times['departure_time'],
+    arrival_time=selected_times['arrival_time']
+    )
+    
+    final_df = input_model.to_dataframe()
     
     if st.button("🚀 Predict"):
         try:
