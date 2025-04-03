@@ -2,7 +2,7 @@
 
 import joblib
 import pandas as pd
-from src.components.ml_components.data_preparation import DataPreparation
+from src.components.data_preparation import DataPreparation
 
 class PredictPipeline:
     def __init__(self):

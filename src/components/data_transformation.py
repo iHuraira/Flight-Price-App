@@ -6,16 +6,11 @@ import numpy as np
 from src.utils import load_config
 from src.logger import logging
 from src.exceptions import CustomException
-from src.components.ml_components.data_ingestion import DataIngestion
-from src.components.ml_components.data_preparation import DataPreparation
 
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
-
-
-
 
 
 class DataTransformation:

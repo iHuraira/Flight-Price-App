@@ -18,9 +18,9 @@ from sklearn.ensemble import (
 from src.logger import logging
 from src.utils import load_config
 from src.exceptions import CustomException
-from src.components.ml_components.data_ingestion import DataIngestion
-from src.components.ml_components.data_preparation import DataPreparation
-from src.components.ml_components.data_transformation import DataTransformation
+from src.components.data_ingestion import DataIngestion
+from src.components.data_preparation import DataPreparation
+from src.components.data_transformation import DataTransformation
 
 
 warnings.filterwarnings("ignore", category=ConvergenceWarning)

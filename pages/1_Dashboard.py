@@ -7,7 +7,6 @@ import plotly.graph_objects as go
 import random
 import plotly.colors as pc 
 
-
 # Title
 st.title('Dashboard Overview')
 

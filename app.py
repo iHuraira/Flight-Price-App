@@ -1,39 +1,47 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
 
-st.set_page_config(layout="wide", initial_sidebar_state="expanded")
-
-dashboard_page = st.Page(
-    page="./src/components/pages/Dashboard.py",
-    title="Dashboard",
-    icon=":material/bar_chart_4_bars:",
+st.set_page_config(
+    page_title="Flight Price Predictor",
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
-about_page = st.Page(
-    page="./src/components/pages/about_me.py",
-    title="About me",
-    icon=":material/account_circle:",
-)
+import streamlit as st
 
-about_data = st.Page(
-    page="./src/components/pages/about_data.py",
-    title="About data",
-    icon=":material/description:",
-)
+st.title("📊 Indian Flight Price Dataset Overview")
 
-predictor_page = st.Page(
-    page="./src/components/pages/predictor.py",
-    title="Predictor",
-    icon=":material/online_prediction:",
-    default=True
-)
+st.markdown("""
+### ✈️ Dataset Summary
 
-pg = st.navigation({
-    "App" : [dashboard_page, predictor_page,  about_data],
-    "Info" : [about_page]
-})
+The dataset contains **206,774** flight records from Indian airlines with details on schedules, cities, and ticket prices.
 
-# This is the new project
+**🧾 Total Entries:** `206,774`  
+**🧱 Columns:** `11`  
+**📦 Memory Usage:** ~`17.4 MB`  
+**✅ Missing Values:** None — all columns are complete
 
-pg.run()
+---
+### 🧩 Column Breakdown
+
+| Column       | Description                                                       | Type     |
+|--------------|-------------------------------------------------------------------|----------|
+| `date`       | Date of the scheduled flight                                      | Object   |
+| `airline`    | Name of the airline operating the flight                          | Object   |
+| `ch_code`    | Airline code (unique per airline)                                 | Object   |
+| `num_code`   | Unique flight code                                                | Integer  |
+| `dep_time`   | Scheduled departure time                                          | Object   |
+| `from`       | Departure city                                                    | Object   |
+| `time_taken` | Total flight duration (e.g., "02h 15m")                           | Object   |
+| `stop`       | Indicates stop type (`non-stop`, `1-stop`, etc.)                 | Object   |
+| `arr_time`   | Scheduled arrival time                                            | Object   |
+| `to`         | Arrival city                                                      | Object   |
+| `price`      | Ticket price (as text, needs cleaning for numeric usage)         | Object   |
+
+---
+### 🧠 Insights
+
+- The dataset is clean with no nulls.
+- Most fields are categorical/text, ideal for encoding.
+- `price` is stored as text and may require conversion for modeling.
+- Could be useful for building price predictors, time estimators, or airline analytics.
+""")

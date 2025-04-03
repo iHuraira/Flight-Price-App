@@ -2,7 +2,7 @@ import os
 import sys
 
 import pandas as pd
-from sklearn.model_selection import train_test_split # type: ignore
+from sklearn.model_selection import train_test_split
 
 from src.utils import load_config
 from src.logger import logging
