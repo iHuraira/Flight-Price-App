@@ -1,5 +1,9 @@
+import pickle
+import sys
 import yaml
 from pathlib import Path
+
+from src.exceptions import CustomException
  
 def load_yaml_file(file_path):
     try:
@@ -28,3 +32,11 @@ def load_all_configs(config_dir="config"):
         configs[key] = load_yaml_file(config_dir / file)
 
     return configs
+
+def load_object(file_path):
+    try:
+        with open(file_path, "rb") as file_obj:
+            return pickle.load(file_obj)
+
+    except Exception as e:
+        raise CustomException(e, sys)

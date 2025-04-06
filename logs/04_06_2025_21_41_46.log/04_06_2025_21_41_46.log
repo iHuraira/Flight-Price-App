@@ -1,0 +1,13 @@
+[ 2025-04-06 21:45:35,966 ] 19 root - INFO - DataPreparation initialized with config settings.
+[ 2025-04-06 21:45:35,966 ] 112 root - INFO - Basic transformation in progress
+[ 2025-04-06 21:45:35,968 ] 114 root - INFO - Columns renamed based on configuration
+[ 2025-04-06 21:45:35,968 ] 118 root - INFO - Loading precomputed flight code statistics for prediction
+[ 2025-04-06 21:45:35,976 ] 124 root - INFO - Starting flight data processing
+[ 2025-04-06 21:45:35,990 ] 126 root - INFO - Flight timing and duration features created
+[ 2025-04-06 21:45:35,990 ] 128 root - INFO - Creating stop-related features
+[ 2025-04-06 21:45:35,994 ] 130 root - INFO - Stop-related features added
+[ 2025-04-06 21:45:35,994 ] 132 root - INFO - Applying flight code frequency-based features
+[ 2025-04-06 21:45:35,997 ] 134 root - INFO - Flight code features added successfully
+[ 2025-04-06 21:45:35,997 ] 136 root - INFO - Mapping 'is_frequent_route' to binary format
+[ 2025-04-06 21:45:35,998 ] 139 root - INFO - Dropping unnecessary columns: ['flight_date', 'airline_code', 'stop_area']
+[ 2025-04-06 21:45:35,999 ] 150 root - INFO - Basic transformation completed successfully

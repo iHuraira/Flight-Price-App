@@ -1,6 +1,6 @@
 import streamlit as st
 
-col_first, col_second, col_third = st.columns(3, gap="large", vertical_alignment="top")
+col_first, col_second = st.columns(2, gap="large", vertical_alignment="top")
 
 with col_first:
     st.image("assets/edited.png", width=250)
@@ -26,8 +26,6 @@ with col_second:
     unsafe_allow_html=True)
     # st.write("**Interests** Computational Biology, Artificial Intelligence, Data Science")
 
-with col_third:
-    st.write("# About Me")
 
 # Justified text sections
 st.write("### About Me")
@@ -47,57 +45,69 @@ Currently, I am deepening my expertise in artificial intelligence to further enh
 
 skills_col_one, skills_col_two = st.columns(2)
 
-skills_expander = st.expander(label="Skills & Expertise", icon=":material/online_prediction:", )
+skills_expander = st.expander(label="Skills & Expertise", icon=":material/online_prediction:")
 
 with skills_expander:
     st.markdown(
-                """
-                <div>
-                <b>Data Analysis & Programming</b> <br> <blockquote> Experienced with tools like Biopython for processing genomic data.
-                </div>
-                """, 
-    unsafe_allow_html=True
+        """
+        <div>
+        <b>Data Analysis & Programming</b> <br> 
+        <blockquote>Proficient in Python for data analysis, scripting, and automation. Experienced with libraries such as pandas, NumPy, and matplotlib for handling and visualizing biological datasets.</blockquote>
+        </div>
+        """, 
+        unsafe_allow_html=True
     )
+
     st.markdown(
-                """
-                <div>
-                <b>Genomic Data Analysis</b> <br> <blockquote> Experienced with tools like Biopython for processing genomic data.
-                </div>
-                """, 
-    unsafe_allow_html=True
+        """
+        <div>
+        <b>Genomic Data Analysis</b> <br> 
+        <blockquote>Hands-on experience analyzing genomic data using Python-based tools like Biopython and custom scripts for pangenome and phylogenetic studies.</blockquote>
+        </div>
+        """, 
+        unsafe_allow_html=True
     )
+
     st.markdown(
-                """
-                <div>
-                <b>Machine Learning & AI</b> <br> <blockquote> Experienced with tools like Biopython for processing genomic data.
-                </div>
-                """, 
-    unsafe_allow_html=True
+        """
+        <div>
+        <b>Machine Learning & AI</b> <br> 
+        <blockquote>Familiar with building ML models using scikit-learn. Interested in applying AI to solve biological and medical data problems.</blockquote>
+        </div>
+        """, 
+        unsafe_allow_html=True
     )
+
     st.markdown(
-                """
-                <div>
-                <b>Statistical Modeling</b> <br> <blockquote> Experienced with tools like Biopython for processing genomic data.
-                </div>
-                """, 
-    unsafe_allow_html=True
+        """
+        <div>
+        <b>Statistical Modeling</b> <br> 
+        <blockquote>Comfortable applying statistical concepts for data interpretation using Python. Experienced in regression analysis and hypothesis testing.</blockquote>
+        </div>
+        """, 
+        unsafe_allow_html=True
     )
+
     st.markdown(
-                """
-                <div>
-                <b>Web Development & Visualization</b> <br> <blockquote> Experienced with tools like Biopython for processing genomic data.
-                </div>
-                """, 
-    unsafe_allow_html=True
+        """
+        <div>
+        <b>Web Development & Visualization</b> <br> 
+        <blockquote>Built web interfaces using Vue.js and React.js, styled with Tailwind CSS and Sass. Familiar with creating interactive components for scientific dashboards.</blockquote>
+        </div>
+        """, 
+        unsafe_allow_html=True
     )
+
     st.markdown(
-                """
-                <div>
-                <b>Containerization & Deployment</b> <br> <blockquote> Experienced with tools like Biopython for processing genomic data.
-                </div>
-                """, 
-    unsafe_allow_html=True
+        """
+        <div>
+        <b>Containerization & Deployment</b> <br> 
+        <blockquote>Basic knowledge of Docker for packaging applications. Experience deploying Streamlit apps and using GitHub for version control.</blockquote>
+        </div>
+        """, 
+        unsafe_allow_html=True
     )
+
         
 st.write("### Contact Me")
 st.write("Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/hurrarah/).")

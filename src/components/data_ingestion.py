@@ -10,6 +10,7 @@ from src.exceptions import CustomException
 
 class DataIngestion:
     def __init__(self, test_size=0.2, random_state=42):
+        
         self.config = load_all_configs()
         self.raw_path = self.config['artifacts']['raw_data_path']
         self.training_path = self.config['artifacts']['train_data_path']
@@ -41,8 +42,3 @@ class DataIngestion:
 
         except Exception as e:
             raise CustomException(e, sys)
-
-
-if __name__ == "__main__":
-    loader = DataIngestion()
-    loader.starting_ingestion()

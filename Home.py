@@ -6,9 +6,11 @@ from random import randint
 
 from src.components.data_model import FlightInputModel
 from src.pipeline.predict_pipeline import PredictPipeline
+from src.components.data_preparation import DataPreparation
 
-
-# ------------------ UTILS ------------------
+st.set_page_config(
+    layout="wide"
+)
 
 def format_duration(minutes):
     hours = minutes // 60
@@ -35,7 +37,7 @@ def generate_time_suggestions(duration_minutes):
     return suggestions
 
 
-# ------------------ PAGE LOGIC ------------------
+
 
 st.title("✈️ Estimated Flight Duration Finder")
 
@@ -113,7 +115,6 @@ input_model = FlightInputModel(
 
 final_df = input_model.to_dataframe()
 
-# Prediction
 if st.button("🚀 Predict"):
     try:
         predictor = PredictPipeline()

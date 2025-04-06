@@ -10,7 +10,7 @@ from src.exceptions import CustomException
 class DataPreparation:
     def __init__(self):
         self.config = load_all_configs()
-        self.renaming_dictionary = self.config['datatransformation']['COLUMN_RENAME_MAPPING']
+        self.renaming_dictionary = self.config['transformation']['COLUMN_RENAME_MAPPING']
         self.stop_area = self.config.get('stop_area_dict', {})
         self.selected_columns = self.config.get('selected_columns', [])
         self.threshold_path = self.config['artifacts']['threshold_path']

@@ -7,10 +7,9 @@ import plotly.graph_objects as go
 import random
 import plotly.colors as pc 
 
-# Title
+
 st.title('Dashboard Overview')
 
-# Description
 st.write("""
 Welcome to the interactive dashboard! Here, you can explore various aspects of the data, analyze trends, and visualize key insights.
 """)
