@@ -3,7 +3,7 @@ import streamlit as st
 col_first, col_second = st.columns(2, gap="large", vertical_alignment="top")
 
 with col_first:
-    st.image("assets/edited.png", width=250)
+    st.image("assets/picture.png", width=250)
     pass
 
 with col_second:
