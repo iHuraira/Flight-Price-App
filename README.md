@@ -31,8 +31,8 @@ If you want to explore the codebase or run the app locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/your-username/Flight-Price-App.git
+cd Flight-Price-App
 
 # Install dependencies
 pip install -r requirements.txt
